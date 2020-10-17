@@ -51,7 +51,7 @@ After all the scraping and pre-processing, now it is time to rev up your engines
 
 3. Multi layer Perceptron Neural Network was also trained and tested with the same split ratio.
 
-4. You can find the implementation of all these models in Model_latest.ipynb in the github repo below .
+4. You can find the implementation of all these models in main.py file.
 
 5. Out of all these, Logistic Regression performed the best when tested against 5 folds of cross validation.
 
