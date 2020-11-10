@@ -6,6 +6,35 @@ Final count of diseases in the dataset were a total of 261 and 500+ symptoms. To
 
 For example, a disease A, having 5 symptoms, now has a total of (2⁵ − 1) entries in the dataset. The dataset, after pre-processing and multiplication, contains around 8835 rows with 489 unique symptoms. This was done to tackle the problem of only having a single row for each disease which results in poor training of data. This idea was inspired by the real-world scenario where a patient even showing some of the symptoms of all the symptoms for a disease can be suffering from that disease, therefore it is a logical extension of the dataset.
 
+# Dataset
+
+The dataset for this problem is downloaded from here: 
+```
+https://impact.dbmi.columbia.edu/~friedma/Projects/DiseaseSymptomKB/index.html
+```
+
+This dataset has 3 columns:
+```
+Disease  | Count of Disease Occurrence | Symptom
+```
+
+You can either copy paste the whole table from here to an excel sheet or scrape it out using Beautifulsoup.
+
+# Directory Structure
+
+```
+|_ dataset/
+         |_ training_data.csv
+         |_ test_data.csv
+
+|_ saved_model/
+         |_ [ pre-trained models ]
+
+|_ main.py [ code for laoding dataset, training & saving the model]
+
+|_ Disease-Prediction-from-Symptoms-checkpoint.ipynb [ IPython Notebook for Loading dataset, training model and Inference ]
+```
+
 ## Pre-processing of Dataset and Solution Sketch
 
 The scraped symptoms are pre-processed to remove similar symptoms with different names (For example, headache 😨 and pain in the forehead 😨). To do so, symptoms are expanded by appending synonyms of terms in the symptom string and computing 💻 Jaccard Similarity Coefficient for each pair of symptoms.
