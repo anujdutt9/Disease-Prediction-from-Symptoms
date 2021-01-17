@@ -80,7 +80,8 @@ class DiseasePrediction:
         sn.heatmap(corr, square=True, annot=False, cmap="YlGnBu")
         plt.title("Feature Correlation")
         plt.tight_layout()
-        #plt.show()
+        if show_fig:
+            plt.show()
         plt.savefig('feature_correlation.png')
 
     # Dataset Train Validation Split
@@ -138,7 +139,6 @@ class DiseasePrediction:
         # Save Trained Model
         dump(classifier, str(self.model_save_path + self.model_name + ".joblib"))
 
-
     # Function to Make Predictions on Test Data
     def make_prediction(self, saved_model_name=None, test_data=None):
         try:
@@ -155,6 +155,7 @@ class DiseasePrediction:
         accuracy = accuracy_score(self.test_labels, result)
         clf_report = classification_report(self.test_labels, result)
         return accuracy, clf_report
+
 
 if __name__ == "__main__":
     # Model Currently Training
