@@ -1,0 +1,10 @@
+python-csv
+matplotlib
+seaborn
+array_collections
+numpy
+pandas
+sckit-learn
+graphviz
+yaml2
+joblib
