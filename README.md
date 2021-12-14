@@ -53,3 +53,29 @@ You can either copy paste the whole table from here to an excel sheet or scrape 
                   |_ raw_data.xlsx [Columbia dataset for notebook]
          |_ Disease-Prediction-from-Symptoms-checkpoint.ipynb [ IPython Notebook for loading Columbia dataset, training model and Inference ]
 ```
+
+# Usage
+
+Please make sure to install all dependencies before running the demo, using the following:
+
+```
+pip install -r requirements.txt
+```
+
+## Interactive Demo
+
+For running an interactive demo or sharing it with others, please run `demo.py` using Jupyter Notebook or Jupyter Lab.
+
+```
+jupyter notebook demo.ipynb
+```
+
+## Standalone Demo
+
+For running the inference on test set or on custom inputs, you can also use the `infr.py` file as follows:
+
+```
+python infer.py
+```
+
+**NOTE: ** ***This project is for demo purposes only. For any symptoms/disease, please refer to a Doctor.***
