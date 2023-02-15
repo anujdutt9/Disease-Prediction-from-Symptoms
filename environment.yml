@@ -100,7 +100,7 @@ dependencies:
   - jdcal=1.4.1=py_0
   - jedi=0.15.2=py38_0
   - jinja2=2.11.2=py_0
-  - joblib=0.15.1=py_0
+  - joblib=1.2.0=py_0
   - jpeg=9b=he5867d9_2
   - json5=0.9.4=py_0
   - jsonschema=3.2.0=py38_0
